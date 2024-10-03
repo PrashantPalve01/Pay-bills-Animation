@@ -1,0 +1,122 @@
+.container {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgb(247, 199, 67);
+}
+
+.container > div {
+  width: 50%;
+}
+
+.container > div p {
+  width: 30%;
+  font-size: 30px;
+  color: white;
+  animation: moveText 5s ease-in-out infinite, changeColor 5s ease-in-out infinite;
+}
+
+@keyframes moveText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(450px);
+  }
+}
+
+@keyframes changeColor {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+.icons_box {
+  display: flex;
+  justify-content: start;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  border-radius: 50%;
+  animation: rotateCircle 5s infinite;
+}
+
+.circle div {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgb(234, 233, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle div i {
+  font-size: 24px;
+}
+
+.circle div:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle div:nth-child(2) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.circle div:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle div:nth-child(4) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.circle div:nth-child(5) {
+  top: 20%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.circle div:nth-child(6) {
+  top: 80%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.circle div:nth-child(7) {
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.circle div:nth-child(8) {
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
